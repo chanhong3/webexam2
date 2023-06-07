@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        h1, h2, h3, h4, h5, h6{
+            margin: 0;
+            padding: 0;
+        }
+        p{
+            margin: 0;
+            padding: 0;
+            font-size: 1rem;
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        body{
+            width: 70%;
+            /* height: 1200px; */
+            margin: 0 auto;
+            background-color: #FEFEF6;
+            /* border: solid 1px brown; */
+        }
+        .clear{
+            clear: both;
+        }
+        header{
+            margin: 0 auto;
+            position: relative;
+            border-bottom: solid 3px #C3172D;
+        }
+        #logo{
+            width: 10%;
+            margin-top: 1%;
+            margin-left: 5%;
+        }
+        #head{
+            text-align: right;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-right: 5%;
+        }
+        header li{
+            display: inline-block;
+            padding: 0 0 2% 2%;
+        }
+        header a{
+            text-decoration: none;
+            color: black;
+        }
+        #top_menu{
+            position: absolute;
+            top: 10%;
+            right: 5%;
+            font-family: "맑은 고딕", "돋움";
+            font-size: 0.8em;
+        }
+
+        footer{
+            /* border: solid 1px green; */
+            position: relative;
+            border-top: solid 3px #C3172D;
+            margin-top: 8%;
+        }
+        footer p{
+            margin-top: 2%;
+            font-size: 0.8em;
+            text-align: center;
+        }
+        #foot_logo{
+            position: absolute;
+            margin-left: 5%;
+            width: 20%;
+        }
+        #foot_logo img{
+            margin-top: 10%;
+            width: 40%;
+        }
+
+        #slide_title{
+            margin-top: 4%;
+            /* float: right; */
+            margin: 0 auto;
+            width: 70%;
+        }
+        #slide_title h2{
+            margin-top: 6%;
+            border-bottom: solid 3px #C3172D;
+        }
+        label {
+            box-sizing: border-box;
+        }
+        ol {
+            list-style-type: none;
+        }
+        .clearfloat:after {
+            display: block;
+            clear: both;
+        }
+
+
+        /* input */
+        #input_slidebtn1,
+        #input_slidebtn2,
+        #input_slidebtn3,
+        #input_slidebtn4,
+        #input_slidebtn5 {
+            display: none;
+        }
+        #input_slidebtn1:checked~.imgslider_cont .cont_imgbox {
+            margin-left: 0;
+        }
+        #input_slidebtn2:checked~.imgslider_cont .cont_imgbox {
+            margin-left: -100%;
+        }
+        #input_slidebtn3:checked~.imgslider_cont .cont_imgbox {
+            margin-left: -200%;
+        }
+        #input_slidebtn4:checked~.imgslider_cont .cont_imgbox {
+            margin-left: -300%;
+        }
+        #input_slidebtn5:checked~.imgslider_cont .cont_imgbox {
+            margin-left: -400%;
+        }
+
+
+
+        /* 이미지박스 */
+        #imgslider {
+            /* margin-top: 4%; */
+            overflow: hidden;
+            position: relative;
+        }
+        #imgslider .imgslider_cont .cont_imgbox {
+            width: 500%;
+            height: 85vh;
+            transition: all 0.9s;
+            /* border: solid 1px green; */
+        }
+        .imgslider_cont .cont_imgbox li {
+            float: left;
+            width: 20%;
+            /* height: 90%; */
+            margin-top: -40px;
+        }
+        .imgslider_cont .cont_imgbox li a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        .imgslider_cont .cont_imgbox li:nth-child(1) {
+            /* background-color: #333; */
+            background-image: url(img/slide6.jpg);
+            /* background-size: cover; */
+            background-repeat: no-repeat;
+            background-position: center center;
+            /* background-size: contain; */
+        }
+        .imgslider_cont .cont_imgbox li:nth-child(2) {
+            /* background-color: #666; */
+            background-image: url(img/slide2.jpg);
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        .imgslider_cont .cont_imgbox li:nth-child(3) {
+            /* background-color: #999; */
+            background-image: url(img/slide3.jpg);
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        .imgslider_cont .cont_imgbox li:nth-child(4) {
+            /* background-color: #ccc; */
+            background-image: url(img/slide4.jpg);
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        .imgslider_cont .cont_imgbox li:nth-child(5) {
+            /* background-color: #eee; */
+            background-image: url(img/slide5.jpg);
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .text_box{
+            /* position: absolute;
+            bottom: 0;
+            left: 0; */
+            margin-top: 600px;
+            height: 100px;
+            width: 100%;
+            /* border: solid 1px yellow; */
+            
+        }
+        .text_box h4{
+            color: #C3172D;
+            margin-top: 2%;
+            border-bottom: solid 3px #C3172D;
+            font-size: 1.1rem;
+            /* font-weight: bold; */
+        }
+        .text_box p{
+            font-size: 1rem;
+            margin-top: 2%;
+            
+        }
+
+        /* left right 버튼박스 */
+        #imgslider .imgslider_cont {
+            position: relative;
+        }
+        .imgslider_cont .cont_label_left,
+        .imgslider_cont .cont_label_right {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+        .cont_label_left_inner label{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: -150%;
+            left: 0;
+            z-index: 1;
+            cursor: pointer;
+            /* background-color: #00f; */
+            background-image: url(img/llll.png);
+        }
+        .cont_label_right_inner label {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: -150%;
+            left: 0;
+            z-index: 1;
+            cursor: pointer;
+            /* background-color: #00f; */
+            background-image: url(img/rrr.png);
+        }
+
+        .imgslider_cont .cont_label_left {
+            left: 0;
+        }
+        .imgslider_cont .cont_label_left .cont_label_left_inner {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            z-index: 2;
+        }
+
+        .imgslider_cont .cont_label_right {
+            right: 0;
+        }
+        .imgslider_cont .cont_label_right .cont_label_right_inner {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            z-index: 2;
+        }
+
+        /* left right 버튼실행 */
+        #input_slidebtn1:checked~.imgslider_cont .cont_label_left_inner label:nth-child(5) {
+            z-index: 2;
+        }
+        #input_slidebtn1:checked~.imgslider_cont .cont_label_right_inner label:nth-child(2) {
+            z-index: 2;
+        }
+        #input_slidebtn2:checked~.imgslider_cont .cont_label_left_inner label:nth-child(1) {
+            z-index: 2;
+        }
+        #input_slidebtn2:checked~.imgslider_cont .cont_label_right_inner label:nth-child(3) {
+            z-index: 2;
+        }
+        #input_slidebtn3:checked~.imgslider_cont .cont_label_left_inner label:nth-child(2) {
+            z-index: 2;
+        }
+        #input_slidebtn3:checked~.imgslider_cont .cont_label_right_inner label:nth-child(4) {
+            z-index: 2;
+        }
+        #input_slidebtn4:checked~.imgslider_cont .cont_label_left_inner label:nth-child(3) {
+            z-index: 2;
+        }
+        #input_slidebtn4:checked~.imgslider_cont .cont_label_right_inner label:nth-child(5) {
+            z-index: 2;
+        }
+        #input_slidebtn5:checked~.imgslider_cont .cont_label_left_inner label:nth-child(4) {
+            z-index: 2;
+        }
+        #input_slidebtn5:checked~.imgslider_cont .cont_label_right_inner label:nth-child(1) {
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img id="logo" src="img/logo.png"></a>
+        <nav id="top_menu">
+            HOME | LOGIN | JOIN | NOTUCE
+        </nav>
+        <nav id="head">
+            <ul>
+                <li><a href="sub_1.html">캐릭터</a></li>
+                <li><a style="color: #C3172D;" href="sub_2.html">팀 소개</a></li>
+                <li><a href="sub_3.html">명대사</a></li>
+                <li><a href="sub_4.html">영화</a></li>
+                <li><a href="sub_5.html">만화책</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="clear"></div>
+
+    <section id="slide_title">
+        <h2>Team Introduction</h2>
+        <div id="imgslider">
+            <input type="radio" name="slidebtn" id="input_slidebtn1" checked />
+            <input type="radio" name="slidebtn" id="input_slidebtn2" />
+            <input type="radio" name="slidebtn" id="input_slidebtn3" />
+            <input type="radio" name="slidebtn" id="input_slidebtn4" />
+            <input type="radio" name="slidebtn" id="input_slidebtn5" />
+    
+            <div class="imgslider_cont">
+                <ul class="cont_imgbox clearfloat">
+                    <li><div class="text_box"><h4>산왕공고</h4>
+                        <p>4 이명헌 · 5 정성구 · 7 신현철 · 8 김낙수 · 9 정우성</p>
+                        <p>전국대회 편 북산의 최종보스 팀으로 3년 연속 전국대회 우승팀에 현 3학년인 이명헌, 신현철 등의 입학 이래 무패 우승을 달리고 있다. 작중 시점의 산왕은 역사적으로도 역대 최강의 산왕이 아닐까 싶을 정도로 평가받고 있었다. 농구에 조금이라도 관심이 있다면 그 이름을 모르는 사람이 없는 걸 보면 엄청난 명문 팀이라는 것을 알 수 있다.</p>
+                        </div><a href="#"></a></li>
+                    <li><div class="text_box"><h4>능남고교</h4>
+                        <p>4 변덕규 · 5 허태환 · 6 안영수 · 7 윤대협 · 13 황태산</p>
+                        <p>상양과 같이 전통적인 강팀은 아니고 비교적 최근에 주목받기 시작했다. <br>
+                            북산의 첫 연습시합 상대이자 지역 예선의 마지막 상대로서 유일하게 2번에 걸쳐 대전하는 팀으로, 북산과 라이벌 구도가 가장 강력하게 드러난다. 팀 vs. 팀의 구도 뿐 아니라 각 소속 캐릭터들의 라이벌 구도도 많이 그려진다.</p>
+                        </div><a href="#"></a></li>
+                    <li><div class="text_box"><h4>상양고교</h4>
+                        <p>4 김수겸 · 5 성현준 · 6 장권혁 · 7 임택중 · 8 오창석</p>
+                        <p>작품에서는 카나가와의 전통적인 강호이지만, 카나가와 지역 예선에서는 17년 연속 우승을 차지중인 해남대부속고에 밀려 번번이 2인자 자리에 머물고 있다. 하지만 그렇기에 해남을 쓰러뜨릴 가능성이 있는 최유력 후보로 꼽히고 있는 강호이다. 감독이 없이 주장인 3학년의 선수 겸 감독인 김수겸이 팀을 책임지고 있었다.</p>
+                        </div><a href="#"></a></li>
+                    <li><div class="text_box"><h4>해남대부속고</h4>
+                        <p>4 이정환 · 5 고민구 · 8 장민현 · 6 신준섭 · 10 전호장</p>
+                        <p>북산이 있는 카나가와현 최강팀으로 17년 연속 도내 우승 기록을 가지고 있으며, 전국대회에도 상위권 입상을 할 정도로 그 실력은 전국구로 평가받는다. 상양, 능남을 비롯한 수 많은 카나가와현 고교들이 해남을 타도하겠다는 일념으로 계속 도전할 정도로 그 위치는 독보적이다. 그렇기에 많은 바스켓 유망주들이 해남에 우르르 몰려들어온다고 한다.</p>
+                        </div><a href="#"></a></li>
+                    <li><div class="text_box"><h4>풍전고교</h4> 
+                        <p>4 남훈 · 5 강동준 · 6 나대룡 · 7 김평일 · 8. 한성호</p>
+                        <p>전국대회 편에서 북산의 첫 상대로 등장한 전 대회 8강팀. 작중 회상에 따르면 전 대회 뿐 아니라 전통적으로 전국대회 8강 정도는 항상 올라오던 단골손님인 듯 하니 상당한 전국구급의 강호라 할 수 있다. 런앤건 플레이를 주로 한다.</p>
+                        </div><a href="#"></a></li>
+                </ul>
+                <div class="cont_label_left">
+                    <div class="cont_label_left_inner">
+                        <label for="input_slidebtn1"></label>
+                        <label for="input_slidebtn2"></label>
+                        <label for="input_slidebtn3"></label>
+                        <label for="input_slidebtn4"></label>
+                        <label for="input_slidebtn5"></label>
+                    </div>
+                </div>
+                <div class="cont_label_right">
+                    <div class="cont_label_right_inner">
+                        <label for="input_slidebtn1"></label>
+                        <label for="input_slidebtn2"></label>
+                        <label for="input_slidebtn3"></label>
+                        <label for="input_slidebtn4"></label>
+                        <label for="input_slidebtn5"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="clear"></div>
+
+    <footer>
+        <div id="foot_logo"><img src="img/logo.png" alt=""></div>
+        <p>Copyright 2023 | LIM CHAN HONG | KAYWON UNIV | Digital Media Design
+            <br>chanhong0311@gmail.com | my favorite SLAMDUNK.<br><br></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        h1, h2, h3, h4, h5, h6{
+            margin: 0;
+            padding: 0;
+        }
+        p{
+            margin: 0;
+            padding: 0;
+            font-size: 1rem;
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        body{
+            width: 70%;
+            margin: 0 auto;
+            background-color: #FEFEF6;
+            /* border: solid 1px brown; */
+        }
+        .clear{
+            clear: both;
+        }
+        header{
+            margin: 0 auto;
+            position: relative;
+            border-bottom: solid 3px #C3172D;
+        }
+        #logo{
+            width: 10%;
+            margin-top: 1%;
+            margin-left: 5%;
+        }
+        #head{
+            text-align: right;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-right: 5%;
+        }
+        header li{
+            display: inline-block;
+            padding: 0 0 2% 2%;
+            /* padding-left: 2%; */
+        }
+        header a{
+            text-decoration: none;
+            color: black;
+        }
+        #top_menu{
+            position: absolute;
+            top: 10%;
+            right: 5%;
+            font-family: "맑은 고딕", "돋움";
+            font-size: 0.8em;
+        }
+
+        #title{
+            margin-top: 4%;
+            margin-bottom: 2%;
+            border-bottom: solid 3px #C3172D;
+            width: 70%;
+            margin-left: 30%;
+            /* padding: 0 10% 0 10%; */
+        }
+
+        aside{
+            margin-top: 4%;
+            /* margin-left: 4%; */
+            float: left;
+            width: 20%;
+            /* border: solid 1px blue; */
+        }
+        aside h2{
+            border-bottom: solid 3px #C3172D;
+        }
+        aside a{
+            text-decoration: none;
+            color: black;
+        }
+        #menu{
+            margin-top: 10%;
+        }
+        #menu li{
+            padding: 5%;
+            border-bottom: dashed 1px gray;
+            font-weight: bold;
+        }
+
+        #dialogue{
+            /* border: solid 1px green; */
+            width: 70%;
+            margin-left: 30%;
+        }
+        .imgtext{
+            /* position: absolute; */
+            display: inline-block;
+            width: 30%;
+            margin-top: 3%;
+            margin-left: 10%;
+            /* float: left;  */
+            /* border: solid 1px red; */
+        }
+        .imgtext img{
+            width: 100%;
+            border: solid 1px #000;
+        }
+
+        footer{
+            /* border: solid 1px green; */
+            position: relative;
+            border-top: solid 3px #C3172D;
+            margin-top: 8%;
+        }
+        footer p{
+            margin-top: 2%;
+            font-size: 0.8em;
+            text-align: center;
+        }
+        #foot_logo{
+            position: absolute;
+            margin-left: 5%;
+            width: 20%;
+        }
+        #foot_logo img{
+            margin-top: 10%;
+            width: 40%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img id="logo" src="img/logo.png"></a>
+        <nav id="top_menu">
+            HOME | LOGIN | JOIN | NOTUCE
+        </nav>
+        <nav id="head">
+            <ul>
+                <li><a href="sub_1.html">캐릭터</a></li>
+                <li><a href="sub_2.html">팀 소개</a></li>
+                <li><a style="color: #C3172D;" href="sub_3.html">명대사</a></li>
+                <li><a href="sub_4.html">영화</a></li>
+                <li><a href="sub_5.html">만화책</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="clear"></div>
+
+    <aside>
+        <h2>menu</h2>
+        <ul id="menu">
+            <li><a href="sub_1.html">캐릭터</a></li>
+            <li><a href="sub_2.html">팀 소개</a></li>
+            <li><a href="sub_3.html">명대사</a></li>
+            <li><a href="sub_4.html">영화</a></li>
+            <li><a href="sub_5.html">만화책</a></li>
+        </ul>
+    </aside>
+
+    <div id="title">
+        <h2>Dialogue</h2>
+    </div>
+
+    <section id="dialogue">
+            <ul>
+                <li>
+                    <div class="imgtext">
+                        <img src="img/dialogue1.jpg" alt="">
+                        <p>전설의 시작 <br>소연이 덕분에 농구를 진심으로 좋아하기 시작함</p>
+                    </div>
+                    <div class="imgtext">
+                        <img src="img/dialogue3.jpg" alt="">
+                        <p>강백호 <br>산왕과의 경기 중 허리를 다친 뒤 안감독님께 한 말</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="imgtext">
+                        <img src="img/dialogue4.jpg" alt="">
+                        <p>정대반 <br>아무리 지쳐도 슛은 들어가는 불꽃남자 정대만</p>
+                    </div>
+                    <div class="imgtext">
+                        <img src="img/dialogue5.jpg" alt="">
+                        <p>서태웅 <br>풍전과의 대결에서 눈을 다친후 눈을 감고 자유투를 쏘면서 한 말</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="imgtext">
+                        <img src="img/dialogue7.jpg" alt="">
+                        <p>변덕규 <br>팀을 더 믿고 게임을 풀어가기 시작함</p>
+                    </div>
+                    <div class="imgtext">
+                        <img src="img/dialogue10.jpg" alt="">
+                        <p>강백호 <br>산왕을 꺾고 한 말 "왼손은 거들 뿐"</p>
+                    </div>
+                </li>
+            </ul>        
+        
+    </section>
+    
+
+    <footer>
+        <div id="foot_logo"><img src="img/logo.png" alt=""></div>
+        <p>Copyright 2023 | LIM CHAN HONG | KAYWON UNIV | Digital Media Design
+            <br>chanhong0311@gmail.com | my favorite SLAMDUNK.<br><br></p>
+    </footer>
+</body>
+</html>

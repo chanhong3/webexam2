@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        h1, h2, h3, h4, h5, h6{
+            margin: 0;
+            padding: 0;
+        }
+        p{
+            margin: 0;
+            padding: 0;
+            font-size: 1rem;
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        body{
+            width: 70%;
+            margin: 0 auto;
+            background-color: #FEFEF6;
+            /* border: solid 1px brown; */
+        }
+        .clear{
+            clear: both;
+        }
+        header{
+            margin: 0 auto;
+            position: relative;
+            border-bottom: solid 3px #C3172D;
+        }
+        #logo{
+            width: 10%;
+            margin-top: 1%;
+            margin-left: 5%;
+        }
+        #head{
+            text-align: right;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-right: 5%;
+        }
+        header li{
+            display: inline-block;
+            padding: 0 0 2% 2%;
+            /* padding-left: 2%; */
+        }
+        header a{
+            text-decoration: none;
+            color: black;
+        }
+        #top_menu{
+            position: absolute;
+            top: 10%;
+            right: 5%;
+            font-family: "맑은 고딕", "돋움";
+            font-size: 0.8em;
+        }
+
+        #title{
+            margin-top: 4%;
+            margin-bottom: 2%;
+            border-bottom: solid 3px #C3172D;
+            width: 70%;
+            margin-left: 30%;
+            /* padding: 0 10% 0 10%; */
+        }
+
+        aside{
+            margin-top: 4%;
+            /* margin-left: 4%; */
+            float: left;
+            width: 20%;
+            /* border: solid 1px blue; */
+        }
+        aside h2{
+            border-bottom: solid 3px #C3172D;
+        }
+        aside a{
+            text-decoration: none;
+            color: black;
+        }
+        #menu{
+            margin-top: 10%;
+        }
+        #menu li{
+            padding: 5%;
+            border-bottom: dashed 1px gray;
+            font-weight: bold;
+        }
+
+        #book{
+            /* position: absolute; */
+            display: inline-block;
+            margin-top: 3%;
+            margin-left: 10%;
+            float: left;
+            /* border: solid 1px red; */
+        }
+        #book img{
+            width: 100%;
+            height: 320px;
+        }
+        #book_info{
+            display: inline-block;
+            /* border: solid 1px blue; */
+            margin-top: 2%;
+            float: right;
+        }
+        #book_info h3{
+            color: #C3172D;
+            margin-bottom: 4%;
+        }
+        #book_info h4{
+            margin-top: 2%;
+        }
+        #book_info p{
+            font-size: 1rem;
+        }
+        .price{
+            float: left;
+            margin-top: 2%;
+            /* width: 130px; */
+        }
+        .price h4{
+            margin-bottom: 20px;
+        }
+        #order{
+            margin-top: 9%;
+            float: right;
+            margin-right: 4%;
+        }
+        .red{
+            font-weight: bold;
+            color: #C3172D;
+            /* margin-top: -20%; */
+        }
+        .small{
+            font-size: 0.8rem;
+            margin-top: 5px;
+        }
+
+        #image{
+            margin-top: 20%;
+            text-align: center;
+        }
+        #image img{
+            width: 40%;
+        }
+
+        footer{
+            /* border: solid 1px green; */
+            position: relative;
+            border-top: solid 3px #C3172D;
+            margin-top: 8%;
+        }
+        footer p{
+            margin-top: 2%;
+            font-size: 0.8em;
+            text-align: center;
+        }
+        #foot_logo{
+            position: absolute;
+            margin-left: 5%;
+            width: 20%;
+        }
+        #foot_logo img{
+            margin-top: 10%;
+            width: 40%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img id="logo" src="img/logo.png"></a>
+        <nav id="top_menu">
+            HOME | LOGIN | JOIN | NOTUCE
+        </nav>
+        <nav id="head">
+            <ul>
+                <li><a href="sub_1.html">캐릭터</a></li>
+                <li><a href="sub_2.html">팀 소개</a></li>
+                <li><a href="sub_3.html">명대사</a></li>
+                <li><a href="sub_4.html">영화</a></li>
+                <li><a style="color: #C3172D;" href="sub_5.html">만화책</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="clear"></div>
+
+    <aside>
+        <h2>menu</h2>
+        <ul id="menu">
+            <li><a href="sub_1.html">캐릭터</a></li>
+            <li><a href="sub_2.html">팀 소개</a></li>
+            <li><a href="sub_3.html">명대사</a></li>
+            <li><a href="sub_4.html">영화</a></li>
+            <li><a href="sub_5.html">만화책</a></li>
+        </ul>
+    </aside>
+
+    <div id="title">
+        <h2>Comic Book</h2>
+    </div>
+    <div id="book">
+        <img src="img/book.png">
+    </div>
+
+    <section id="book_info">
+        <h3>[대원씨아이] 슬램덩크 만화책</h3>
+
+        <h4>평점&emsp;<img src="img/Asset 7.png" width="15%"></h4>
+        
+        <h4>소개</h4>
+        <p>주인공 강백호는 소연의 권유로 상북고의 농구부에 생떼를 써서 입단하게 된다. <br>
+            무식하고 힘만 센 강백호는 기초 연습만 하게 되지만 소연의 가르침에 힘입어 농구에 <br>대한 감각을 차차 익혀나간다. <br>
+            자칭 농구천재라 하고 상북고 최고의 플레이어 서태웅을 라이벌로 생각하기도 한다. <br>
+            노력파 채치수, 권준호 선배, 정대만, 송태섭 등과 같은 팀원들과 함께 점점 농구의 <br>매력에 빠져들게 된다.</p>
+
+        
+        <ul class="price">
+            <h4>구매</h4>
+            <li class="red">126,000 원</li>
+            <li class="small">배송비 무료</li>
+        </ul>
+        <div id="order">
+            <td><select>
+                <option>주문수량</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>직접입력</option>
+            </select></td>
+            <button type="button">장바구니 담기</button>
+        </div> 
+    </section>
+
+    <div class="clear"></div>
+
+    <div id="image">
+        <h1>당신의<br>'영광의 순간'은<br>언제인가요?</h1>
+        <img src="img/team.jpg">
+    </div>
+
+    <div class="clear"></div>
+
+    <footer>
+        <div id="foot_logo"><img src="img/logo.png" alt=""></div>
+        <p>Copyright 2023 | LIM CHAN HONG | KAYWON UNIV | Digital Media Design
+            <br>chanhong0311@gmail.com | my favorite SLAMDUNK.<br><br></p>
+    </footer>
+</body>
+</html>
